@@ -24,7 +24,8 @@
             </nav>
 
         </header>
-
+        <canvas id="matrixRain"></canvas>
+        <script src="assets\JS\MatrixEffect.js"></script>
         <section class="container">
             <h1 class="SectionHeader">Architecture of LLMs</h1>
             <img src="assets\img\LLM.jpg" alt="">
@@ -32,29 +33,41 @@
                 <section class="intro">
                     <h2>Basic Architecture of LLMs:</h2>
                     <p>Large language models are mainly built upon the architecture of Transformer, which is a kind of
-                        neural network that constructed by multiple layers, and also adopting similar pre-training
-                        objectives like language modeling as small language models. However, the model size, data size,
-                        and total computation of large language models are significantly extended. </p>
-                    <p>Three mainstream architectures </p>
-                    <ol>blue: attention between prefix tokens</ol>
-                    <ol>green: attention between prefix and target tokens</ol>
-                    <ol>yellow: attention between target tokens, grey: masked attention</ol>
+                        neural network that
+                        constructed by multiple layers, and also adopting similar pre-training objectives like language
+                        modeling as small
+                        language models. However, the model size, data size, and total computation of large language
+                        models are significantly
+                        extended. </p>
+                    <h3>Three mainstream architectures</h3>
+                    <ol>
+                        <li>blue: attention between prefix tokens</li>
+                        <li>green: attention between prefix and target tokens</li>
+                        <li>yellow: attention between target tokens, grey: masked attention</li>
+                    </ol>
                     <img src="assets\img\architectures.png">
-                    <p>Causal Decoder Architecture: This architecture includes a one-way attention mask to ensure that
+                    <h3>Causal Decoder Architecture</h3>
+                    <p> This architecture includes a one-way attention mask to ensure that
                         each input token can focus on the past tokens and itself only. The input and output tokens are
                         processed in the same way by the decoder.</p>
-                    <p>Prefix Decoder Architecture: This architecture modifies the mask mechanism of the causal decoder
+                    <h3>Prefix Decoder Architecture:</h3>
+                    <p> This architecture modifies the mask mechanism of the causal decoder
                         to allow two-way attention to the prefix token and only one-way attention to the generated
                         token. In this way, just like encoder-decoder architecture, the prefix decoder can encode the
                         prefix sequence bidirectionally and automatically regression to predict the output label one by
                         one, where the same parameters are shared during encoding and decoding. Instead of pre-training
                         from scratch, it seems better to continuously train the causal decoder and then convert it into
                         a prefix decoder to speed up the convergence.</p>
-                    <p>Encoder-decoder Architecture: The architecture consists of two stacks of Transformer modules, one
+                    <h3>Encoder-decoder Architecture:</h3>
+                    <p> This architecture consists of two stacks of Transformer modules, one
                         as an encoder and other one as a decoder. The encoder encodes the input sequence with stacked
                         multi-head self-attention layers to generate its underlying representation, while the decoder
                         cross-focuses on these representations and autoregressively generates the target sequence.</p>
 
+                </section>
+            </main>
+            <main>
+                <section class="intro">
                     <h2>Emergent Abilities of LLMs:</h2>
                     <p>These are the main differences between large language models and small language models that
                         including the following abilities:</p>
@@ -73,6 +86,10 @@
                             this ability may have been acquired through code training.</li>
                     </ul>
 
+                </section>
+            </main>
+            <main>
+                <section class="intro">
                     <h2>Key Techniques for LLMs:</h2>
                     <ul>
                         <li>Scaling: Scaling laws are formed to improve the capacity of large language models by help to
@@ -88,13 +105,14 @@
                             generators, LLMs are designed to have the ability to manipulate external tools like
                             calculators or search engines …etc.</li>
                     </ul>
-
-
-
                 </section>
             </main>
 
 
+        </section>
+        <section class="watermarks">
+            <h4>CS1102 - Course Project - 2023/2024 Semester B</h4>
+            <p>OUYANG Zhihao - 58057756 Lam Wai Man - 56614729 CHANG SUET LAM - 56620091 Tsang Ka Ki - 57849290</p>
         </section>
     </body>
 

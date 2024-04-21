@@ -2,7 +2,7 @@ var canvas = document.getElementById('matrixRain');
 var context = canvas.getContext('2d');
 
 canvas.width = window.innerWidth;
-canvas.height = 600;
+canvas.height = window.innerHeight;
 
 var katakana = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
 var latin = 'abcdefghijklmnopqrstuvwxyz';
@@ -36,3 +36,4 @@ var draw = () => {
 };
 
 setInterval(draw, 60);
+

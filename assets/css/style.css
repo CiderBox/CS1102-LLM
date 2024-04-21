@@ -8,11 +8,9 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    background: #000000;
     /* background:
-        linear-gradient(#2b1055, #7597de); */
-    background:
-        linear-gradient(#000000, #330d26, #f33dfd90);
-    /* background: linear-gradient(to bottom, #f3c5bd 0%, #e86c57 50%, #ea2803 51%, #ff6600 75%, #c72200 100%); */
+        linear-gradient(#000000, #330d26, #f33dfd90); */
     min-height: 100vh;
 }
 
@@ -64,22 +62,37 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px;
+    padding: 40px;
     background-color: #fff;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 8px;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 20px #ccc;
 }
 
 .intro h1,
 .intro h2 {
     color: rgb(164, 36, 119);
     font-size: 30px;
+    margin-bottom: 0.5em;
+    text-transform: capitalize;
 }
 
 .intro ul {
     padding-left: 20px;
-    font-size: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+}
+
+.intro li {
+    margin-bottom: 1em;
+}
+
+.intro p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1em;
 }
 
 .subtitle {
@@ -90,7 +103,6 @@ main {
 
 .typing {
     padding: 20px;
-    /* padding-top: 100px; */
     color: #ffffff;
     margin: 20px;
     display: flex;
@@ -108,8 +120,12 @@ main {
 
 canvas {
     display: flex;
-    position: fixed;
     z-index: -1;
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 img {
@@ -173,14 +189,12 @@ input[type="range"]::-moz-range-thumb {
 #dataSizeValue {
     position: absolute;
     top: -30px;
-
     right: 0;
-
     background-color: #7B1FA2;
     color: white;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,7 +224,44 @@ button:hover {
 
 #outputText {
     background-color: #eee;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.watermarks {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: right;
+    margin-right: 60px;
+}
+
+.benefits-drawbacks-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.benefits,
+.drawbacks {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    background: #333;
+    color: #fff;
+    text-align-last: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+ol {
+    list-style-position: inside;
+    padding-left: 0;
 }
