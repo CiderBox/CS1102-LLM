@@ -1,4 +1,4 @@
-function updateSliderValue(slider) {
+function update_Slider_Value(slider) {
     var valueDisplay;
     if (slider.id === 'layersSlider') {
         valueDisplay = document.getElementById('layersValue');
@@ -9,7 +9,7 @@ function updateSliderValue(slider) {
 }
 
 
-function getLevel(value) {
+function level_Detect(value) {
     if (value <= 33) {
         return 'low';
     } else if (value <= 66) {
@@ -20,14 +20,14 @@ function getLevel(value) {
 }
 
 
-function generateText() {
+function output_generate() {
     var loader = document.getElementById('loadingSpinner');
     var outputTextArea = document.getElementById('outputText');
     loader.style.display = 'block';
     outputTextArea.style.display = 'none';
     setTimeout(function () {
-        var layersLevel = getLevel(document.getElementById('layersSlider').value);
-        var dataSizeLevel = getLevel(document.getElementById('dataSizeSlider').value);
+        var layersLevel = level_Detect(document.getElementById('layersSlider').value);
+        var dataSizeLevel = level_Detect(document.getElementById('dataSizeSlider').value);
         var presetOutputs = {
             'low': {
                 'low': "Computer science is study of computers.",

@@ -4,17 +4,17 @@ var context = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-var katakana = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-var latin = 'abcdefghijklmnopqrstuvwxyz';
+var capital_letter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var lowercase_character = 'abcdefghijklmnopqrstuvwxyz';
 var nums = '0123456789';
-var characters = katakana + latin + nums;
+var characters = capital_letter + lowercase_character + nums;
 var fontSize = 16;
 var columns = canvas.width / fontSize;
 
 
-var rainDrops = [];
+var drop_Array = [];
 for (var x = 0; x < columns; x++) {
-    rainDrops[x] = Math.floor(Math.random() * (canvas.height / fontSize));
+    drop_Array[x] = Math.floor(Math.random() * (canvas.height / fontSize));
 }
 
 var draw = () => {
@@ -22,16 +22,16 @@ var draw = () => {
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     context.fillStyle = 'rgba(244,244,244,0.3)';
-    context.font = fontSize + 'px "Arial", monospace';;
+    context.font = fontSize + 'px "Arial", monospace';
 
-    for (var i = 0; i < rainDrops.length; i++) {
+    for (var i = 0; i < drop_Array.length; i++) {
         var text = characters.charAt(Math.floor(Math.random() * characters.length));
-        context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+        context.fillText(text, i * fontSize, drop_Array[i] * fontSize);
 
-        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            rainDrops[i] = 0;
+        if (drop_Array[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drop_Array[i] = 0;
         }
-        rainDrops[i]++;
+        drop_Array[i]++;
     }
 };
 

@@ -56,7 +56,7 @@
                             <div class="slider-container">
                                 <div id="layersValue">50</div>
                                 <input type="range" id="layersSlider" min="1" max="100" value="50"
-                                    oninput="updateSliderValue(this)">
+                                    oninput="update_Slider_Value(this)">
                             </div>
 
                             <br>
@@ -64,10 +64,10 @@
                             <div class="slider-container">
                                 <div id="dataSizeValue">50</div>
                                 <input type="range" id="dataSizeSlider" min="1" max="100" value="50"
-                                    oninput="updateSliderValue(this)">
+                                    oninput="update_Slider_Value(this)">
                             </div>
 
-                            <button onclick="generateText()">Generate Text</button>
+                            <button onclick="output_generate()">Generate Text</button>
                             <img id="loadingSpinner" src="assets\img\Spinner.gif"
                                 style="display: none; width: 50px; height: 50px;box-shadow: none;">
                             <div id="outputText">Your generated text will appear here...</div>
