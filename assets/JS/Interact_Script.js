@@ -28,6 +28,7 @@ function output_generate() {
     setTimeout(function () {
         var layersLevel = level_Detect(document.getElementById('layersSlider').value);
         var dataSizeLevel = level_Detect(document.getElementById('dataSizeSlider').value);
+        //The output content is generate by LLM for real experience
         var presetOutputs = {
             'low': {
                 'low': "Computer science is study of computers.",

@@ -1,3 +1,4 @@
+// inspired from "Matrix Rain Experiments in JavaScript (tutorial)" https://www.youtube.com/watch？v=f5ZswIE_SgY&ab_channel=Frankslaboratory
 var canvas = document.getElementById('matrixRain');
 var context = canvas.getContext('2d');
 
